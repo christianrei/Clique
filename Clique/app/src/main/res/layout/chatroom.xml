@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/chatroom"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@color/background_material_light">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/drawSpot"
+        android:gravity="top"
+        android:lines="7"
+        android:maxLines="7"
+        android:paddingLeft="7dp"
+        android:imeOptions="actionDone"
+        android:textColor="#222222"
+        android:background="@drawable/drawtext"
+        android:layout_above="@+id/sendButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/sendmessage"
+        android:scaleType="fitXY"
+        android:id="@+id/sendButton"
+        android:onClick="sendMessage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/drawSpot"
+        android:layout_alignEnd="@+id/drawSpot" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Color"
+        android:textSize="15dp"
+        android:background="@drawable/colourbutton"
+        android:id="@+id/button3"
+        android:onClick="drawColour"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/sendButton"
+        android:layout_toStartOf="@+id/sendButton" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/eraseButton"
+        android:src="@drawable/eraser1"
+        android:scaleType="fitXY"
+        android:onClick="modeSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/drawButton"
+        android:layout_gravity="center"
+        android:src="@drawable/pencil2"
+        android:scaleType="fitXY"
+        android:onClick="modeSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/eraseButton"
+        android:layout_toStartOf="@+id/eraseButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/textButton"
+        android:layout_gravity="center"
+        android:text="Text"
+        android:textSize="13dp"
+        android:textColor="#222222"
+        android:scaleType="fitXY"
+        android:onClick="modeSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/drawButton"
+        android:layout_toStartOf="@+id/drawButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingTop="8dp"
+        android:paddingLeft="6dp"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:text="123456789019"
+        android:background="@drawable/fancydisplay"
+        android:textColor="#222222"
+        android:id="@+id/personalizedName"
+        android:layout_below="@+id/drawSpot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/textButton"
+        android:layout_toStartOf="@+id/textButton" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:id="@+id/viewThing"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendButton"
+        android:layout_alignTop="@+id/drawSpot"
+        android:layout_alignEnd="@+id/sendButton"
+        android:layout_alignParentStart="true">
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewChat"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/drawSpot"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/messageSpot">
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

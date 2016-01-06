@@ -1,0 +1,7 @@
+<FrameLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:id="@+id/fragmentcontainer"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+</FrameLayout>
