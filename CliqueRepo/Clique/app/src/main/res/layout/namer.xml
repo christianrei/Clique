@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#18A7B5" android:id="@+id/popup_element">
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:id="@+id/submitBtn"
+        android:layout_below="@+id/nameText"
+        android:layout_gravity="center_vertical"
+        android:background="#6495ED"
+        android:onClick="popOnClick" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter screen name"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:id="@+id/nameText" />
+
+    <!--<EditText-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:hint="Password"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/nameText"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/passText" />-->
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:id="@+id/cancelBtn"
+        android:layout_gravity="center_vertical"
+        android:background="#6495ED"
+        android:onClick="popOnClick"
+        android:layout_alignTop="@+id/submitBtn"
+        android:layout_alignRight="@+id/nameText"
+        android:layout_alignEnd="@+id/nameText" />
+</RelativeLayout>
